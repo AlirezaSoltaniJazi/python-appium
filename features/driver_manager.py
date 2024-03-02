@@ -2,6 +2,7 @@ from _pytest.fixtures import FixtureFunction
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from appium.webdriver.appium_service import AppiumService
+from appium.webdriver.webdriver import WebDriver
 from pytest import fixture
 
 from configs import AppConfig, AppServer
@@ -19,7 +20,7 @@ def appium_service():
     service.stop()
 
 
-def create_android_driver(custom_opts=None):
+def create_android_driver(custom_opts=None) -> WebDriver:
     capabilities = AppConfig.FIREFOX_CONFIG
     options = UiAutomator2Options().load_capabilities(capabilities)
     LOGGER.info('Android driver', extra={
