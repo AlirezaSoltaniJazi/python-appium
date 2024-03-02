@@ -40,5 +40,5 @@ def create_android_driver(custom_opts=None) -> WebDriver:
 
 
 @fixture
-def android_driver_factory(appium_service: FixtureFunction):
+def android_driver_factory(appium_service: FixtureFunction):  # pyling: ignore=W0621,W0613
     return create_android_driver
