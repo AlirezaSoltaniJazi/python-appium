@@ -9,6 +9,7 @@ appium-python-client = "*"
 pre-commit = "*"
 python-json-logger = "*"
 assertpy = "*"
+selenium = "*"
 
 [dev-packages]
 
