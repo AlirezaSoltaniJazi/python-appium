@@ -23,15 +23,20 @@ def appium_service():
 def create_android_driver(custom_opts=None) -> WebDriver:
     capabilities = AppConfig.FIREFOX_CONFIG
     options = UiAutomator2Options().load_capabilities(capabilities)
-    LOGGER.info('Android driver', extra={
-        'capabilities': capabilities,
-        'options_capabilities': options.capabilities,
-        'appium_host': AppServer.APPIUM_HOST,
-        'appium_port': AppServer.APPIUM_PORT
-    })
+    LOGGER.info(
+        'Android driver',
+        extra={
+            'capabilities': capabilities,
+            'options_capabilities': options.capabilities,
+            'appium_host': AppServer.APPIUM_HOST,
+            'appium_port': AppServer.APPIUM_PORT,
+        },
+    )
     if custom_opts is not None:
         options.load_capabilities(custom_opts)
-    return webdriver.Remote(f'http://{AppServer.APPIUM_HOST}:{AppServer.APPIUM_PORT}', options=options)
+    return webdriver.Remote(
+        f'http://{AppServer.APPIUM_HOST}:{AppServer.APPIUM_PORT}', options=options
+    )
 
 
 @fixture

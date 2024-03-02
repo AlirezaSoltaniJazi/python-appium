@@ -1,3 +1,1 @@
-pytest_plugins: list[str] = [
-    'features.driver_manager'
-]
+pytest_plugins: list[str] = ['features.driver_manager']

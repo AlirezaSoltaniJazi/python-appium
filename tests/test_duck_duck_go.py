@@ -22,5 +22,7 @@ def test_search_phrase_by_browser(android_driver_factory):
         result = browser.get_first_index_of_search_results()
 
         # Assert
-        assert_that(result).is_equal_to('Alireza SoltaniJazi - Senior Software Test Engineer - BazaarPay | LinkedIn')
+        assert_that(result).is_equal_to(
+            'Alireza SoltaniJazi - Senior Software Test Engineer - BazaarPay | LinkedIn'
+        )
         time.sleep(5)

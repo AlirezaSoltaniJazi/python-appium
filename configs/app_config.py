@@ -14,7 +14,7 @@ class AppConfig:
         "appium:nativeWebScreenshot": True,
         "appium:newCommandTimeout": 3600,
         "appium:connectHardwareKeyboard": True,
-        "resetKeyboard": True
+        "resetKeyboard": True,
     }
     CHROME_CONFIG: Final[dict] = {
         "automationName": "UiAutomator2",
@@ -28,7 +28,7 @@ class AppConfig:
         "appium:nativeWebScreenshot": True,
         "appium:newCommandTimeout": 3600,
         "appium:connectHardwareKeyboard": True,
-        "resetKeyboard": True
+        "resetKeyboard": True,
     }
 
 
